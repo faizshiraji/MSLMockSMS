@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>SMS Send</title>
+</head>
+<body>
+	<h1>Send Your SMS</h1>
+	<h3 th:value="${msg}"></h3>
+	<form method="post" th:action="@{/smssend}">
+		<div>
+			<label for="msisdn">Mobile Number</label>
+			<div>
+				<input type="text" id="msisdn" name="msisdn"
+					placeholder="Enter your Mobile Number" required="required" />
+			</div>
+			<label for="msgbody">Message Body</label>
+			<div>
+				<input type="text" id="msgbody" name="msgbody"
+					placeholder="Enter your Message Here" required="required" />
+			</div>
+			<div>
+				<button type="submit">Send</button>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
